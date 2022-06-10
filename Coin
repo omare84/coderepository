@@ -1,0 +1,29 @@
+import java.util.Random;
+
+public class Coin {
+
+    //field called side
+private String side;
+
+//encapsulation
+public static String HEADS = "Heads";
+//constant variables for heads and tails
+public static String TAILS = "Tails";
+
+public String getSide() {
+return side;
+}
+    public void setSide(String side) {
+        this.side = side;
+    }
+//method called flip which randomly chooses heads or tails and assigns value to side
+public String flip() {
+    if (new Random().nextBoolean()) {
+        setSide(HEADS);
+    } else {
+        setSide(TAILS);
+    }
+    return getSide();
+}
+
+}
